@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+    font-family: 'Aladin', cursive;
+}
+body{
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    transition: display 2s;;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.navbar{
+    height: 3rem;
+    width: 100%;
+    background: linear-gradient(77deg, yellow 77%, orange);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    height: 100%;
+    width:  100px;
+}
+ul{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+}
+ul li{
+    list-style: none;
+    /* border: 2px solid red; */
+}
+.hamburger-wrap{
+    height: 100%;
+    width: 100px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger{
+    height: 5rem;
+    width: 3rem;
+    /* border: 2px solid red; */
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+.hamburger > span{
+    display: inline-block;
+    height: .3rem;
+    width: 2rem;
+    background: red;
+    margin: .35rem 0rem;
+}
+@media all and (max-width: 550px){
+    .hamburger{
+        visibility: visible;
+    }
+    ul{
+        font-size: 0;
+    }
+}
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: -2000px;
+    height: 100vh;
+    width: 80vw;
+    background: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .5s;
+}
+.sidebar.active{
+    left: 0;
+}
+.hamburger-2{
+    height: 5rem;
+    width: 100%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: yellow;
+    font-size: 3rem;
+    padding: 0 2rem 0 0;
+    cursor: grab;
+}
+.logo-2{
+    /* border: 2px solid yellow; */
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+}
+h3{
+    color: yellow;
+    /* border: 2px solid yellow; */
+    font-size: 2rem;
+}
+.sidebar-nav{
+    /* border: 2px solid yellow; */
+    height: 28rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    letter-spacing: 2rem;
+}
+/*  */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid white; */
+    border-radius: .5rem;
+    /* box-shadow: 0 0 10px white; */
+}
+button{
+    border: 0;
+    height: 3rem;
+    width: 20rem;
+    background: linear-gradient(200deg, rgb(208, 205, 205), skyblue);
+    border-radius: .3rem;
+    box-shadow: 0 5px 10px white;
+    color: white;
+    letter-spacing: .4rem;
+}

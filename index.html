@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/home.css">
+    <link rel="stylesheet" href="static/search.css">
+    <link rel="stylesheet" href="static/about.css">
+    <link rel="stylesheet" href="static/login.css">
+    <link rel="stylesheet" href="static/register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <h1 class="logo">NCS</h1>
+        </div>
+        <ul>
+            <!-- anchor tags given 2 classes, one for matching in delegation and the other for identifying which section to display -->
+            <li>
+                <a href="" class="home nav-anchor">HOME</a>
+            </li>
+             <li>
+                <a href="" class="search nav-anchor">SEARCH</a>
+            </li>
+             <li>
+                <a href="" class="about nav-anchor">ABOUT</a>
+            </li>
+             <li>
+                <a href="" class="login nav-anchor">LOGIN</a>
+            </li>
+             <li>
+                <a href="" class="logout nav-anchor">LOGOUT</a>
+            </li>
+             <li>
+                <a href="" class="register nav-anchor">REGISTER</a>
+            </li>
+        </ul>
+        <div class="hamburger-wrap container">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <aside class="sidebar">
+        <div class="hamburger-2">X</div>
+        <h1 class="logo-2">NCS</h1>
+        <h3>MENU</h3>
+        <nav class="sidebar-nav">
+            <a href="">HOME</a>
+            <a href="">SEARCH</a>
+            <a href="">ABOUT</a>
+            <a href="">PROFILE</a>
+            <a href="">LOGIN</a>
+        </nav>
+    </aside>
+    <section id="HOME" class="section">
+
+    </section>
+    <section id="SEARCH" class="section">
+   
+    </section>
+    <section id="ABOUT" class="section"></section>
+    <section id="LOGIN" class="section">
+        <div class="form-container">
+            <h2>WELCOME</h2>
+            <h3>Login</h3>
+            <form action="" class="form-login">
+                <div class="input-container-login">
+                    <label for="">email</label>
+                    <input type="text" name="email-login" placeholder="enter email...">
+                </div>
+                <div class="input-container-login">
+                    <label for="">password</label>
+                    <input type="password" name="password-login" placeholder="enter password...">
+                </div>
+                <div class="input-container-login">
+                    <button class="button-login">CLICK ME</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="REGISTER" class="section">
+        <form action="" class="form-register">
+            <div class="input-container">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" placeholder="enter first name..." required>
+                <p>First and last name can't be equal!</p>
+            </div>
+            <div class="input-container">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" placeholder="enter last name..." required>
+                <p>First and last name can't be equal!</p>
+            </div>
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="enter email..." required>
+                <p>Email must be a valid email, e.g. joy@gmail.com</p>
+                <!-- email type text to avoid annoying title messages -->
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="enter name..." required>
+                <p>Password is good.</p>
+            </div>
+            <div class="input-container">
+                <label for="birth_name">Birth Date</label>
+                <input type="date" name="birth_date" required>
+            </div>
+            <div class="input-container">
+                <button class="button-register">CLICK ME</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js" ></script>
+    <script src="js/home.js" ></script>
+    <script src="js/form.js" ></script>
+    <script src="js/loginForm.js" ></script>
+</body>
+</html>

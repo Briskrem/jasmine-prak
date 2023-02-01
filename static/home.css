@@ -1,0 +1,12 @@
+#HOME{
+    min-height: 100vh;
+    width: 100%;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url('pics/hog.png');
+    background-position: center;
+    background-size: cover; */
+    /* display: none; */
+}

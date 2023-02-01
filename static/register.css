@@ -1,0 +1,67 @@
+#REGISTER{
+    min-height: 100vh;
+    width: 100%;
+    background: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.form-register{
+    height: 40rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px white;
+}
+form p{
+    font-size: .85rem;
+    color: red;
+    opacity: 0;
+    margin-top: .5rem;
+}
+input.Invalid + p{
+    opacity: 1;
+}
+input[name="password"].Valid + p{
+    opacity: 1;
+    color: greenyellow;
+}
+.input-container{
+    /* border: 2px solid red; */
+    height: 16.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-container > input{
+    outline: 0;
+    border: 0;
+    height: 2rem;
+    width: 20rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 10px white;
+    text-align: center;
+    color: skyblue;
+}
+.input-container > label{
+    letter-spacing: .3rem;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+input.Valid{
+    box-shadow: 0 0 10px white;
+    border: 1px solid greenyellow;
+
+}
+input.Invalid{
+    box-shadow: 0 0 10px black;
+    border: .1px solid red;
+}
