@@ -41,8 +41,17 @@ function checkEmail(input, regex){
     }
 }
 
-function checkPassword(input, regex){
-    if(regex.test(input.value)){
+function checkPassword(input){
+    let letter = /[a-z]/, caps = /[A-Z]/, special = /[\@\#\!\$\%\&\*]/, number = /[0-9]/, numberCheck = false;
+    if(input.value.match(/[0-9]/)){
+        numberCheck = true
+    }
+    let letterCheck = letter.test(input.value);
+    let capsCheck = caps.test(input.value);
+    let specialCheck = special.test(input.value);
+    let length = input.value.length > 14
+    console.log(letterCheck, capsCheck, specialCheck, length, numberCheck)
+    if(letterCheck && capsCheck && specialCheck && length && numberCheck){
         input.className = 'Valid'
         return true
     }else{
