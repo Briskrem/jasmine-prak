@@ -49,7 +49,7 @@ function checkPassword(input){
     let letterCheck = letter.test(input.value);
     let capsCheck = caps.test(input.value);
     let specialCheck = special.test(input.value);
-    let length = input.value.length > 14
+    let length = input.value.length > 13
     console.log(letterCheck, capsCheck, specialCheck, length, numberCheck)
     if(letterCheck && capsCheck && specialCheck && length && numberCheck){
         input.className = 'Valid'
