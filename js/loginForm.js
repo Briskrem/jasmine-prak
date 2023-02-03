@@ -23,3 +23,10 @@ formLogin.addEventListener('submit', async e => {
         console.log(e)
     }
 })
+//-=========-===========-==============-
+function check(input){
+    
+    if(input < 50) return 'lesser';
+    if(input > 100 && input > 50) return 'much better';
+    if(input > 50) return 'greater'
+}

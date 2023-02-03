@@ -15,8 +15,10 @@ async function getCards(){
         while(cardContainer.firstChild){
             cardContainer.removeChild(cardContainer.firstChild);
         }
+        //USING FRAGMENTS INSTEAD OF APPPENDCHILD AND INNERHTML
+        let fragment = document.createDocumentFragment();
+
         for(let i = 0; i < results.length; i++){
-            console.log(results[i])
             let element = document.createElement('div');
             element.classList.add('data-card')
             let nameElemet = document.createElement('h1');
@@ -26,8 +28,14 @@ async function getCards(){
             emailElement.textContent = `Email: ${results[i].email}`;
             timeElement.innerText = `Register Date: ${results[i].date_created}`
             element.append(nameElemet, emailElement, timeElement);
-            cardContainer.appendChild(element)
+            fragment.appendChild(element)
+            // cardContainer.appendChild(element);
+            // console.log(cardContainer.children[0].matches('div'),'jomie')
+
+            
         }
+        cardContainer.appendChild(fragment);
+        return results
     }catch(e){
         console.log(e,'errzz')
     }

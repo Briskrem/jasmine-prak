@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/jasmine-core@4.1.0/lib/jasmine-core/jasmine.css" />
 </head>
 <body>
     <nav class="navbar">
@@ -64,6 +65,8 @@
         </nav>
     </aside>
     <section id="HOME" class="section">
+        <button  class="hoeBut2" onclick="function myFunction(){ console.log('happy dance')} myFunction();">click me</button>
+        <button class="hoeBut" onclick="(() => console.log('hi'))()">Hi</button>
         <div class="card-container"></div>
     </section>
     <section id="SEARCH" class="section">
@@ -114,7 +117,7 @@
             </div>
             <div class="input-container">
                 <label for="birth_name">Birth Date</label>
-                <input type="date" name="birth_date" required>
+                <input type="date" name="birth_date"   required>
             </div>
             <div class="input-container">
                 <button class="button-register">CLICK ME</button>
@@ -122,10 +125,19 @@
         </form>
     </section>
 
+    <script src="https://unpkg.com/jasmine-core@4.1.0/lib/jasmine-core/jasmine.js"></script>
+    <script src="https://unpkg.com/jasmine-core@4.1.0/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="https://unpkg.com/jasmine-core@4.1.0/lib/jasmine-core/boot0.js"></script>
+    <script src="https://unpkg.com/jasmine-core@4.1.0/lib/jasmine-core/boot1.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="js/script.js" ></script>
     <script src="js/home.js" ></script>
     <script src="js/form.js" ></script>
     <script src="js/loginForm.js" ></script>
+
+    <script src="js/form.test.js" ></script>
+    <script src="js/home.test.js" ></script>
 </body>
 </html>
